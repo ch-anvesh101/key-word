@@ -1,0 +1,23 @@
+package com.backend.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.backend.repo.Laptopsrepo;
+import com.backend.entity.Laptops;
+
+
+
+@Service
+public class LaptopsService {
+	@Autowired
+	private Laptopsrepo repo;
+	
+	public List<Laptops> getAllLaptops(){
+		return repo.findAll();
+		
+	}
+
+}
